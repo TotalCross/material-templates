@@ -21,7 +21,7 @@ public class Inicial extends Container {
 	}
 
 	public void initUI() {
-		Images.loadImage(fmH);
+		Images.loadImage();
 
 		ImageControl background = new ImageControl(Images.background);
 		background.scaleToFit = true;

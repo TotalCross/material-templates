@@ -25,6 +25,11 @@ public class MaterialConstants {
 	public static final int EDIT_HEIGHT = UnitsConverter.toPixels(52 + Control.DP);
 
 	public static final int TABS_HEIGHT = UnitsConverter.toPixels(40 + Control.DP);
-
+	
+	public static final int FIFTY_DP  = UnitsConverter.toPixels(50 + Control.DP);
+	
+	public static final int FIFTYSIX_DP  = UnitsConverter.toPixels(56 + Control.DP);
+	
+	public static final int TWENTY_DP  = UnitsConverter.toPixels(20 + Control.DP);
 	
 }

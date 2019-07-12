@@ -8,7 +8,7 @@ public class Images {
 	public static Image float_button_on_p, float_button_on_s, sample_image, logo, logo_white, background, logo_nome_borda,
 			float_button_back_on_s;
 
-	public static void loadImage(int fmh) {
+	public static void loadImage() {
 
 		try {
 			float_button_on_p = new Image("images/float_button_white.png").smoothScaledBy(0.9, 0.9);

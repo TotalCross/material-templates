@@ -3,11 +3,12 @@ package com.totalcross.easytiful.ui;
 import com.totalcross.easytiful.util.Colors;
 import com.totalcross.easytiful.util.Fonts;
 import com.totalcross.easytiful.util.Images;
+import com.totalcross.easytiful.util.MaterialConstants;
 
 import totalcross.sys.Settings;
 import totalcross.ui.Bar;
 import totalcross.ui.Container;
-import totalcross.ui.FloatingButton;
+import totalcross.ui.FloatingActionButton;
 import totalcross.ui.Label;
 import totalcross.ui.MainWindow;
 import totalcross.ui.TabbedContainer;
@@ -15,7 +16,6 @@ import totalcross.ui.event.DragEvent;
 import totalcross.ui.event.PenEvent;
 import totalcross.ui.event.PenListener;
 import totalcross.ui.gfx.Color;
-import totalcross.util.UnitsConverter;
 
 public class MaterialTemplates02 extends Container {
 	private String[] tits = { "", "", "" };
@@ -143,8 +143,8 @@ public class MaterialTemplates02 extends Container {
 		tc.setContainer(1, tcc1);
 		tc.setContainer(2, tcc2);
 
-		Images.loadImage(fmH);
-		FloatingButton floatbutton = new FloatingButton(Images.float_button_back_on_s);
+		Images.loadImage();
+		FloatingActionButton floatbutton = new FloatingActionButton(Images.float_button_back_on_s);
 		floatbutton.setBackColor(Colors.SECONDARY);
 		floatbutton.setIconSize(20);
 		floatbutton.setIcon(Images.float_button_back_on_s);
@@ -152,9 +152,9 @@ public class MaterialTemplates02 extends Container {
 		add(bar, LEFT, TOP, FILL, SCREENSIZE + 13);
 		add(tc, LEFT, BOTTOM, FILL, SCREENSIZE + 55);
 		add(bgcontainer, LEFT, AFTER, FILL, FIT, bar);
-		add(itemsContainer, LEFT, BEFORE + UnitsConverter.toPixels(DP + 130), FILL, SCREENSIZE + 10, tc);
+		add(itemsContainer, LEFT, BEFORE + MaterialConstants.FIFTY_DP, FILL, SCREENSIZE + 10, tc);
 
-		itemsContainer.add(item1, LEFT + UnitsConverter.toPixels(DP + 10), AFTER, SCREENSIZE + 33, SCREENSIZE + 10);
+		itemsContainer.add(item1, LEFT + MaterialConstants.COMPONENT_SPACING, AFTER, SCREENSIZE + 33, SCREENSIZE + 10);
 		itemsContainer.add(item2, AFTER, SAME, SCREENSIZE + 33, SCREENSIZE + 10);
 		itemsContainer.add(item3, AFTER, SAME, SCREENSIZE + 33, SCREENSIZE + 10);
 
@@ -162,7 +162,7 @@ public class MaterialTemplates02 extends Container {
 		add(subitemcontainer2, AFTER, SAME, SCREENSIZE + 33, SCREENSIZE + 1);
 		add(subitemcontainer3, AFTER, SAME, SCREENSIZE + 34, SCREENSIZE + 1);
 
-		add(floatbutton, RIGHT - UnitsConverter.toPixels(DP + 50), BOTTOM - UnitsConverter.toPixels(DP + 250));
+		add(floatbutton, RIGHT - MaterialConstants.BORDER_SPACING, BOTTOM - MaterialConstants.FIFTY_DP);
 		floatbutton.addPressListener((e) -> {
 			Inicial inicial = new Inicial();
 			MainWindow.getMainWindow().swap(inicial);

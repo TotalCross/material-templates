@@ -3,14 +3,14 @@ package com.totalcross.easytiful.ui;
 import com.totalcross.easytiful.util.Colors;
 import com.totalcross.easytiful.util.Fonts;
 import com.totalcross.easytiful.util.Images;
+import com.totalcross.easytiful.util.MaterialConstants;
 
 import totalcross.sys.Settings;
 import totalcross.ui.Bar;
 import totalcross.ui.Container;
-import totalcross.ui.FloatingButton;
+import totalcross.ui.FloatingActionButton;
 import totalcross.ui.MainWindow;
 import totalcross.ui.Slider;
-import totalcross.util.UnitsConverter;
 
 public class MaterialTemplates01 extends Container {
 	private Bar bar;
@@ -31,8 +31,8 @@ public class MaterialTemplates01 extends Container {
 		bottom_container = new Container();
 		bottom_container.setBackColor(Colors.BACKGROUND_GRAY_01);
 
-		Images.loadImage(fmH);
-		FloatingButton floatbutton = new FloatingButton(Images.float_button_back_on_s);
+		Images.loadImage();
+		FloatingActionButton floatbutton = new FloatingActionButton(Images.float_button_back_on_s);
 		floatbutton.setBackColor(Colors.SECONDARY);
 		floatbutton.setIconSize(20);
 		floatbutton.setIcon(Images.float_button_back_on_s);
@@ -44,14 +44,13 @@ public class MaterialTemplates01 extends Container {
 
 		add(minibar, LEFT, TOP, FILL, SCREENSIZE + 3);
 		add(bar, LEFT, AFTER, FILL, PREFERRED); // use 0 instead of TOP to
-												// overwrite the default menu
-												// area
-
+												// overwrite the default menu area
 		add(bottom_container, LEFT, BOTTOM, SCREENSIZE + 100, SCREENSIZE + 50);
 		add(top_container, LEFT, AFTER, FILL, FIT, bar);
-		add(floatbutton, getScreenWidth() * 80 / 100, bottom_container.getY() - floatbutton.getPreferredHeight() / 2);
-		bottom_container.add(slider, RIGHT - UnitsConverter.toPixels(DP + 50), TOP + UnitsConverter.toPixels(DP + 330),
+		add(floatbutton, RIGHT - MaterialConstants.COMPONENT_SPACING, CENTER);
+		bottom_container.add(slider, RIGHT - MaterialConstants.FIFTY_DP, BOTTOM + MaterialConstants.FIFTY_DP,
 				SCREENSIZE + 40, PREFERRED);
+
 		floatbutton.addPressListener((e) -> {
 			Inicial inicial = new Inicial();
 			MainWindow.getMainWindow().swap(inicial);

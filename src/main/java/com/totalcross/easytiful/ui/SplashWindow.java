@@ -17,7 +17,7 @@ public class SplashWindow extends Window{
 	}
 	
 	protected void onPopup() {
-		Images.loadImage(fmH);
+		Images.loadImage();
 		ImageControl logo;
 		logo = new ImageControl(Images.logo);
 		logo.scaleToFit = true;

@@ -28,6 +28,7 @@ public class Colors {
 
 	
 	// Backcolor samples colors
+	public static int BACKGROUND_WHITE = 0xFFFFFF;
 	public static int BACKGROUND_GRAY_01 = Color.getRGB(245, 245, 246);
 	public static int BACKGROUND_GRAY_02 = Color.getRGB(225, 225, 226);
 	public static int BACKGROUND_GRAY_03 = Color.getRGB(205, 205, 206);

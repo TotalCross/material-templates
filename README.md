@@ -1,4 +1,4 @@
-# MaterialTemplates
+# material-templates
 
 Templates following <a href = "https://blog.totalcross.com/en/material-o-layout-da-google/" target="_black">Quanter Paper aka Material Design</a>, Google's design pattern according to the  <a href = "https://material.io/resources/color/#!/?view.left=0&view.right=1" target="_black">Material Colors tool</a>
 
